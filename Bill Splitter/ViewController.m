@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *billAmount;
 @property (weak, nonatomic) IBOutlet UISlider *numberOfPeople;
 @property (weak, nonatomic) IBOutlet UILabel *splitAmount;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfPeopleLabel;
 
 @end
 
@@ -21,7 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.numberOfPeople.continuous = YES;
+    
 }
+- (IBAction)sliderChanged:(UISlider *)sender {
+    int people = roundf(self.numberOfPeople.value);
+    NSString *numberOfPeopleAsString = [NSString stringWithFormat:@"%i people", people];
+    self.numberOfPeopleLabel.text = numberOfPeopleAsString;
+}
+
 - (IBAction)calculateSplitAmount:(UIButton *)sender {
     NSDecimalNumber *billAmountAsNumber = [[NSDecimalNumber alloc] initWithString:self.billAmount.text];
     

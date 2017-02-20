@@ -29,20 +29,46 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y9e-IC-rx7">
-                                <rect key="frame" x="22" y="66" width="347" height="31"/>
+                                <rect key="frame" x="22" y="113" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.52801792512690349" green="0.52801792512690349" blue="0.52801792512690349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Grk-hN-aTV"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-gT-bcx">
-                                <rect key="frame" x="169.5" y="104" width="35" height="30"/>
+                                <rect key="frame" x="170" y="235" width="35" height="30"/>
                                 <state key="normal" title="Split!"/>
                                 <connections>
                                     <action selector="calculateSplitAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVy-HM-fd2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-Le-44l">
-                                <rect key="frame" x="24" y="142" width="343" height="21"/>
+                                <rect key="frame" x="24" y="273" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-cy-HXG">
+                                <rect key="frame" x="166" y="151" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW7-Wj-Pop">
+                                <rect key="frame" x="114" y="84" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 people" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud0-OZ-2N5">
+                                <rect key="frame" x="147.5" y="151" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="hOa-uH-YAe"/>
+                                    <constraint firstAttribute="height" constant="21" id="s7A-PR-rdn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,14 +76,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Zfz-gT-bcx" firstAttribute="top" secondItem="Ud0-OZ-2N5" secondAttribute="bottom" constant="63" id="1Yw-iK-gq2"/>
                             <constraint firstItem="Y9e-IC-rx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="4Qi-Si-INA"/>
+                            <constraint firstItem="Y9e-IC-rx7" firstAttribute="top" secondItem="XW7-Wj-Pop" secondAttribute="bottom" constant="8" id="EBY-7u-Df6"/>
+                            <constraint firstItem="Ud0-OZ-2N5" firstAttribute="top" secondItem="Y9e-IC-rx7" secondAttribute="bottom" constant="8" id="EfT-LI-ri7"/>
                             <constraint firstItem="Y9e-IC-rx7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="Fqw-5V-wEQ"/>
-                            <constraint firstItem="Y9e-IC-rx7" firstAttribute="top" secondItem="S1R-xa-ub6" secondAttribute="bottom" constant="8" id="H8I-9K-y80"/>
+                            <constraint firstItem="XW7-Wj-Pop" firstAttribute="top" secondItem="S1R-xa-ub6" secondAttribute="bottom" constant="26" id="JKe-Zh-Mag"/>
                             <constraint firstItem="S1R-xa-ub6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Jb8-Pc-1Ob"/>
                             <constraint firstItem="S1R-xa-ub6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="KKM-Gh-UuW"/>
+                            <constraint firstItem="XW7-Wj-Pop" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SKf-Bd-ju1"/>
                             <constraint firstItem="Zfz-gT-bcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SlA-gu-5Sk"/>
-                            <constraint firstItem="Zfz-gT-bcx" firstAttribute="top" secondItem="Y9e-IC-rx7" secondAttribute="bottom" constant="8" id="XLL-vn-Lh8"/>
                             <constraint firstItem="Tdp-Le-44l" firstAttribute="top" secondItem="Zfz-gT-bcx" secondAttribute="bottom" constant="8" id="aeE-km-geg"/>
+                            <constraint firstItem="Ud0-OZ-2N5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f4S-6F-u8E"/>
                             <constraint firstItem="S1R-xa-ub6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fIl-eM-f1i"/>
                             <constraint firstItem="Tdp-Le-44l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="gcM-um-VDn"/>
                             <constraint firstItem="Tdp-Le-44l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ouG-rM-emU"/>
@@ -66,6 +96,7 @@
                     <connections>
                         <outlet property="billAmount" destination="S1R-xa-ub6" id="ZZt-gj-tpC"/>
                         <outlet property="numberOfPeople" destination="Y9e-IC-rx7" id="ahR-k3-n0j"/>
+                        <outlet property="numberOfPeopleLabel" destination="Ud0-OZ-2N5" id="5vE-og-udI"/>
                         <outlet property="splitAmount" destination="Tdp-Le-44l" id="NNw-pZ-ZOD"/>
                     </connections>
                 </viewController>
